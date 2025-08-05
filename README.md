@@ -1,6 +1,7 @@
 # 🐄 Farming Simulator 25 Dashboard
 
-A powerful, modern web-based dashboard to analyze and manage your **Farming Simulator 25** save game data.
+Thanks to FS25 comprehensive saving scheme, it makes reading data extremely easy, though the in-game UI seems to not be that, at all.
+This application provides a comprehensive data explorer for your save file.
 
 ## 📦 Features
 
@@ -27,13 +28,13 @@ A powerful, modern web-based dashboard to analyze and manage your **Farming Simu
 1. Open the game and load your save.
 2. Open the app in your browser by launching `index.html`.
 3. Click **"Choose Save Folder"** and select your local FS25 save directory.
-    ```
-    Example path:
-    C:\Users\[YourName]\AppData\Local\Packages\GIANTSSoftware.FarmingSimulator25PC_fa8jxm5fj0esw\LocalCache\Local\save
-    ```
-3. Your save data will be parsed and presented on the dashboard.
+   ```
+   Example path:
+   C:\Users\[YourName]\AppData\Local\Packages\GIANTSSoftware.FarmingSimulator25PC_fa8jxm5fj0esw\LocalCache\Local\save
+   ```
+4. Your save data will be parsed and presented on the dashboard.
 
-> ⚠️ **Info**: FS25 uses encrytped data. When your save is laoded, the files are moved to \Local\save. Thus, the data can only be parsed when your game is open with the save loaded.*
+> ⚠️ **Info**: FS25 uses encrytped data. When your save is laoded, the files are moved to \Local\save. Thus, the data can only be parsed when your game is open with the save loaded.\*
 
 ## 📌 TODO / Planned Features
 
@@ -44,10 +45,11 @@ A powerful, modern web-based dashboard to analyze and manage your **Farming Simu
 - 🔜 Economy & Finances
 - 🔜 Property Overview
 - 🔜 Genetic Insights & Breeding Suggestions
-- 🔜 Store save game data to local storage*
+- 🔜 Prevent reloading - Websocket mod\*
 
 ---
-**JoshWalki**  
+
+**JoshWalki**
 Built with ❤️ for FS25 players.
 
 > This is a community fan-made tool and is not affiliated with GIANTS Software or the official Farming Simulator team.

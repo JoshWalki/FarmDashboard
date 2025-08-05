@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<onCreateLoadedObjects>
+    <object saveId="ShipMover_splineBargeRiverUp" time="0.896292"/>
+    <object saveId="ferry01_CLUSTER_CONNECTED">
+        <ferry isMounted="false" time="0.000000" state="WAITING_DOCK_1">
+            <animatedObject index="1" time="1.000000" direction="0"/>
+            <animatedObject index="2" time="0.000000" direction="0"/>
+        </ferry>
+    </object>
+    <object saveId="ShipStatic_vehicleBarge01" isVisible="true" isSwitchPending="false" nextChangeHour="22"/>
+    <object saveId="ShipMover_splineBargeRiverDown" time="0.765506"/>
+    <object saveId="ShipStatic_vehicleBarge02" isVisible="false" isSwitchPending="false" nextChangeHour="15"/>
+    <object saveId="ferry02_CLUSTER">
+        <ferry isMounted="false" time="0.000000" state="WAITING_DOCK_1">
+            <animatedObject index="1" time="1.000000" direction="0"/>
+            <animatedObject index="2" time="0.000000" direction="0"/>
+        </ferry>
+    </object>
+</onCreateLoadedObjects>

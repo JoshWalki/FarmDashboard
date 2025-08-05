@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<sales>
+    <item timeLeft="5" isGenerated="true" xmlFilename="data/vehicles/skoda/enyaq/enyaq.xml" age="31" price="26148" damage="0.206023" wear="0.941436" operatingTime="112958.898438"/>
+    <item timeLeft="17" isGenerated="true" xmlFilename="data/vehicles/fendt/mt1100/mt1100.xml" age="11" price="255767" damage="0.211526" wear="0.879552" operatingTime="35133.816406">
+        <boughtConfiguration name="design" id="2"/>
+    </item>
+</sales>

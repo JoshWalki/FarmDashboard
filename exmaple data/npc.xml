@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<npcs>
+    <npc name="GRANDPA"/>
+    <npc name="FORESTER"/>
+    <npc name="FARMER"/>
+    <npc name="HELPER"/>
+    <npc name="ANIMAL_DEALER">
+        <player uniqueUserId="jWm0YKUKuD2Rmmb9cWkVYIYZlgn2QMsShCuUndOW0gU=" numContacts="14">
+            <conversation uniqueId="775dd98dca" numTriggered="1" lastMonotonicDay="21" lastDate="2025/08/04 22:54"/>
+            <conversation uniqueId="2778e901a6" numTriggered="1" lastMonotonicDay="21" lastDate="2025/08/04 22:55"/>
+            <conversation uniqueId="65a2bc676d" numTriggered="1" lastMonotonicDay="21" lastDate="2025/08/04 22:54"/>
+            <conversation uniqueId="e447e72870" numTriggered="1" lastMonotonicDay="21" lastDate="2025/08/04 22:55"/>
+            <conversation uniqueId="03d9c19b50" numTriggered="1" lastMonotonicDay="21" lastDate="2025/08/04 22:54"/>
+            <conversation uniqueId="d7fd87a0fd" numTriggered="1" lastMonotonicDay="21" lastDate="2025/08/04 22:53"/>
+            <conversation uniqueId="b99759c82f" numTriggered="1" lastMonotonicDay="21" lastDate="2025/08/04 22:54"/>
+            <conversation uniqueId="345249355c" numTriggered="1" lastMonotonicDay="21" lastDate="2025/08/04 22:55"/>
+            <conversation uniqueId="dfaead6155" numTriggered="2" lastMonotonicDay="21" lastDate="2025/08/04 22:56"/>
+            <conversation uniqueId="c7d8a5a59b" numTriggered="1" lastMonotonicDay="21" lastDate="2025/08/04 22:54"/>
+            <conversation uniqueId="bb0236da62" numTriggered="3" lastMonotonicDay="21" lastDate="2025/08/04 22:55"/>
+        </player>
+    </npc>
+</npcs>

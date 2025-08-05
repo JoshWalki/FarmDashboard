@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<settings>
+    <foodScale value="2"/>
+    <accidentsChance value="11"/>
+    <maxDealerAnimals value="7"/>
+    <deathEnabled value="2"/>
+</settings>
