@@ -1,7 +1,6 @@
 # 🐄 Farming Simulator 25 Dashboard
 
-Thanks to FS25 comprehensive saving scheme, it makes reading data extremely easy, though the in-game UI seems to not be that, at all.
-This application provides a comprehensive data explorer for your save file.
+A powerful, modern web-based dashboard to analyze and manage your **Farming Simulator 25** save game data.
 
 ## 📦 Features
 
@@ -45,7 +44,7 @@ This application provides a comprehensive data explorer for your save file.
 - 🔜 Economy & Finances
 - 🔜 Property Overview
 - 🔜 Genetic Insights & Breeding Suggestions
-- 🔜 Prevent reloading - Websocket mod\*
+- 🔜 Store save game data to local storage\*
 
 ---
 
