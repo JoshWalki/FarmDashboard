@@ -1,0 +1,494 @@
+/* =================================
+   DARK FARM THEME - PROFESSIONAL & IMMERSIVE
+   ================================= */
+
+/* Root variables for farm-inspired colors */
+:root {
+    --farm-primary: #2d5016;      /* Deep forest green */
+    --farm-secondary: #8b4513;    /* Saddle brown */
+    --farm-success: #556b2f;      /* Dark olive green */
+    --farm-info: #4682b4;         /* Steel blue */
+    --farm-warning: #cd853f;      /* Peru/harvest gold */
+    --farm-danger: #8b0000;       /* Dark red */
+    --farm-dark: #1a1a1a;         /* Rich dark background */
+    --farm-darker: #121212;       /* Deeper dark */
+    --farm-light: #f5f5dc;        /* Beige for text */
+    --farm-muted: #a0a0a0;        /* Muted gray */
+    --farm-accent: #daa520;       /* Golden rod accent */
+}
+
+/* Main background with farm atmosphere */
+body.bg-dark {
+    background: linear-gradient(135deg,
+        #1a1a1a 0%,
+        #2d2d2d 25%,
+        #1a1a1a 50%,
+        #2d2d2d 75%,
+        #1a1a1a 100%) !important;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: var(--farm-light) !important;
+}
+
+/* Farm-themed card backgrounds */
+.bg-farm-primary {
+    background: linear-gradient(135deg, var(--farm-primary) 0%, #3a6b1f 100%) !important;
+    box-shadow: 0 8px 32px rgba(45, 80, 22, 0.3) !important;
+}
+
+.bg-farm-info {
+    background: linear-gradient(135deg, var(--farm-info) 0%, #5a9bd4 100%) !important;
+    box-shadow: 0 8px 32px rgba(70, 130, 180, 0.3) !important;
+}
+
+.bg-farm-warning {
+    background: linear-gradient(135deg, var(--farm-warning) 0%, #daa520 100%) !important;
+    box-shadow: 0 8px 32px rgba(205, 133, 63, 0.3) !important;
+}
+
+.bg-farm-success {
+    background: linear-gradient(135deg, var(--farm-success) 0%, #6b8e23 100%) !important;
+    box-shadow: 0 8px 32px rgba(85, 107, 47, 0.3) !important;
+}
+
+.bg-farm-secondary {
+    background: linear-gradient(135deg, var(--farm-secondary) 0%, #a0522d 100%) !important;
+    box-shadow: 0 8px 32px rgba(139, 69, 19, 0.3) !important;
+}
+
+/* Farm-themed text colors */
+.text-farm-primary { color: var(--farm-primary) !important; }
+.text-farm-secondary { color: var(--farm-secondary) !important; }
+.text-farm-success { color: var(--farm-success) !important; }
+.text-farm-info { color: var(--farm-info) !important; }
+.text-farm-warning { color: var(--farm-warning) !important; }
+.text-farm-danger { color: var(--farm-danger) !important; }
+.text-farm-accent { color: var(--farm-accent) !important; }
+.text-farm-light { color: var(--farm-light) !important; }
+.text-farm-muted { color: var(--farm-muted) !important; }
+
+/* Farm-themed borders */
+.border-farm-accent { border-color: var(--farm-accent) !important; }
+.border-farm-primary { border-color: var(--farm-primary) !important; }
+.border-farm-success { border-color: var(--farm-success) !important; }
+
+/* Farm-themed outline buttons */
+.btn-outline-farm-accent {
+    color: var(--farm-accent) !important;
+    border-color: var(--farm-accent) !important;
+    background-color: transparent;
+}
+
+.btn-outline-farm-accent:hover {
+    color: #000 !important;
+    background-color: var(--farm-accent) !important;
+    border-color: var(--farm-accent) !important;
+}
+
+.btn-farm-accent {
+    color: #000 !important;
+    background-color: var(--farm-accent) !important;
+    border-color: var(--farm-accent) !important;
+    box-shadow: 0 4px 12px rgba(218, 165, 32, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-farm-accent:hover {
+    color: #000 !important;
+    background-color: #b8941c !important;
+    border-color: #b8941c !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(218, 165, 32, 0.4);
+}
+
+/* Enhanced card styling */
+.card {
+    background-color: rgba(40, 40, 40, 0.95) !important;
+    border: 1px solid rgba(85, 107, 47, 0.3) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Status badges with farm theme */
+.status-badge {
+    font-size: 0.75em;
+    font-weight: 600;
+    margin: 1px;
+    padding: 0.35em 0.65em;
+    border-radius: 0.375rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-pregnant {
+    background: linear-gradient(135deg, #cd853f 0%, #daa520 100%) !important;
+    color: #000 !important;
+    box-shadow: 0 2px 8px rgba(205, 133, 63, 0.4);
+}
+
+.status-lactating {
+    background: linear-gradient(135deg, #4682b4 0%, #5a9bd4 100%) !important;
+    color: #fff !important;
+    box-shadow: 0 2px 8px rgba(70, 130, 180, 0.4);
+}
+
+.status-parent {
+    background: linear-gradient(135deg, #556b2f 0%, #6b8e23 100%) !important;
+    color: #fff !important;
+    box-shadow: 0 2px 8px rgba(85, 107, 47, 0.4);
+}
+
+/* Health bars with enhanced styling */
+.health-bar {
+    width: 70px;
+    height: 10px;
+    background: linear-gradient(90deg, #2d2d2d 0%, #3d3d3d 100%);
+    border: 1px solid #555;
+    border-radius: 6px;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.health-fill {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.6s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.health-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: healthShimmer 2s infinite;
+}
+
+@keyframes healthShimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.health-excellent {
+    background: linear-gradient(90deg, #228B22 0%, #32CD32 100%);
+    box-shadow: 0 0 10px rgba(50, 205, 50, 0.5);
+}
+
+.health-good {
+    background: linear-gradient(90deg, #6B8E23 0%, #9ACD32 100%);
+    box-shadow: 0 0 10px rgba(154, 205, 50, 0.4);
+}
+
+.health-average {
+    background: linear-gradient(90deg, #DAA520 0%, #FFD700 100%);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+.health-poor {
+    background: linear-gradient(90deg, #CD853F 0%, #F4A460 100%);
+    box-shadow: 0 0 10px rgba(244, 164, 96, 0.4);
+}
+
+.health-critical {
+    background: linear-gradient(90deg, #B22222 0%, #DC143C 100%);
+    box-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
+}
+
+/* Enhanced header styling */
+.display-4 {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    font-weight: 700;
+    position: relative;
+}
+
+.display-4::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--farm-success) 0%, var(--farm-accent) 100%);
+    border-radius: 2px;
+}
+
+/* Alert positioning with farm theme */
+.alert-fixed {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1055;
+    min-width: 320px;
+    border-radius: 12px;
+    border: 2px solid rgba(85, 107, 47, 0.3);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+}
+
+/* Enhanced table styling */
+.table-dark {
+    --bs-table-bg: transparent;
+    --bs-table-striped-bg: rgba(40, 40, 40, 0.8);
+    --bs-table-hover-bg: rgba(85, 107, 47, 0.2);
+    border: none;
+}
+
+.table-success {
+    --bs-table-bg: var(--farm-success);
+    --bs-table-hover-bg: rgba(85, 107, 47, 0.8);
+}
+
+/* Navigation pills enhancement */
+.nav-pills .nav-link {
+    background-color: rgba(40, 40, 40, 0.8);
+    border: none;
+    color: var(--farm-light);
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: rgba(85, 107, 47, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(85, 107, 47, 0.3);
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--farm-primary) !important;
+    border-color: none;
+    box-shadow: 0 4px 16px rgba(85, 107, 47, 0.4);
+}
+
+/* DataTables dark theme integration */
+.dataTables_wrapper {
+    color: var(--farm-light) !important;
+}
+
+.dataTables_filter input {
+    background-color: rgba(40, 40, 40, 0.9) !important;
+    border: 1px solid rgba(85, 107, 47, 0.5) !important;
+    color: var(--farm-light) !important;
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+.dataTables_length select {
+    background-color: rgba(40, 40, 40, 0.9) !important;
+    border: 1px solid rgba(85, 107, 47, 0.5) !important;
+    color: var(--farm-light) !important;
+    border-radius: 6px;
+}
+
+/* Button enhancements */
+.btn-success {
+    background: linear-gradient(135deg, var(--farm-success) 0%, #6b8e23 100%);
+    border-color: var(--farm-success);
+    box-shadow: 0 4px 12px rgba(85, 107, 47, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #6b8e23 0%, var(--farm-accent) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(85, 107, 47, 0.4);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, var(--farm-danger) 0%, #cd0000 100%);
+    border-color: var(--farm-danger);
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3);
+}
+
+/* Scrollbar styling for dark theme */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #3b3b3b;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3b3b3b;
+    border-radius: 6px;
+    border: none;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #333333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .health-bar {
+        width: 50px;
+        height: 8px;
+    }
+
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Alert positioning */
+.alert-fixed {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    z-index: 1055;
+    min-width: 320px;
+}
+
+/* Dashboard Navigation Cards */
+.dashboard-nav-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.dashboard-nav-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border-color: var(--farm-primary);
+}
+
+.dashboard-nav-card .display-1 {
+    font-size: 4rem;
+    transition: transform 0.3s ease;
+}
+
+.dashboard-nav-card:hover .display-1 {
+    transform: scale(1.1);
+}
+
+.dashboard-nav-card .card-body {
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-nav-card .card-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.dashboard-nav-card:hover .card-body::before {
+    left: 100%;
+}
+
+/* Back Home Button - Fixed Position */
+.btn-back-home {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1060;
+    border-radius: 25px;
+    padding: 8px 16px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-back-home:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(218, 165, 32, 0.4);
+}
+
+/* Summary Cards - Clickable Styling */
+.summary-card-clickable {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent !important;
+}
+
+.summary-card-clickable:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5) !important;
+    border: 2px solid var(--farm-accent) !important;
+}
+
+.summary-card-clickable:active {
+    transform: translateY(-1px);
+    transition: all 0.1s ease;
+}
+
+.summary-card-clickable::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+    z-index: 1;
+}
+
+.summary-card-clickable:hover::before {
+    left: 100%;
+}
+
+.summary-card-clickable .card-body {
+    position: relative;
+    z-index: 2;
+}
+
+/* Active state for summary cards */
+.summary-card-active {
+    border: 2px solid var(--farm-accent) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(218, 165, 32, 0.4) !important;
+}
+
+.summary-card-active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    border-color: transparent var(--farm-accent) transparent transparent;
+    z-index: 3;
+}
+
+.summary-card-active::before {
+    content: '✓';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    color: #000;
+    font-size: 10px;
+    font-weight: bold;
+    z-index: 4;
+    line-height: 1;
+}
