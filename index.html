@@ -269,7 +269,10 @@
                     <span class="badge bg-farm-success" id="pasture-count"
                       >Loading...</span
                     >
-                    <span class="badge bg-farm-danger ms-2 d-none" id="pasture-warnings-badge">
+                    <span
+                      class="badge bg-farm-danger ms-2 d-none"
+                      id="pasture-warnings-badge"
+                    >
                       <i class="bi bi-exclamation-triangle me-1"></i>
                       <span id="pasture-warnings-count">0</span> Warnings
                     </span>
@@ -324,7 +327,7 @@
           <div class="row mb-4">
             <div class="col-12 text-center">
               <h2 class="text-farm-accent">
-                <i class="bi bi-truck me-2"></i>
+                <i class="bi bi-clipboard-data me-2"></i>
                 Livestock Management
               </h2>
             </div>
@@ -426,10 +429,18 @@
                       <h6 class="card-title mb-0">
                         <i class="bi bi-funnel me-2"></i>
                         Livestock Filters
-                        <button class="btn btn-sm btn-outline-light ms-2" onclick="dashboard.toggleFilters()" id="filter-toggle-btn">
+                        <button
+                          class="btn btn-sm btn-outline-light ms-2"
+                          onclick="dashboard.toggleFilters()"
+                          id="filter-toggle-btn"
+                        >
                           <i class="bi bi-chevron-down"></i> Show Filters
                         </button>
-                        <button class="btn btn-sm btn-outline-warning ms-2" onclick="dashboard.resetFilters()" id="reset-filters-btn">
+                        <button
+                          class="btn btn-sm btn-outline-warning ms-2"
+                          onclick="dashboard.resetFilters()"
+                          id="reset-filters-btn"
+                        >
                           <i class="bi bi-arrow-clockwise me-1"></i> Reset
                         </button>
                       </h6>
@@ -438,119 +449,307 @@
                       <div class="row g-3">
                         <!-- Age Filter -->
                         <div class="col-md-3">
-                          <label class="form-label text-farm-accent">Age Range (months)</label>
+                          <label class="form-label text-farm-accent"
+                            >Age Range (months)</label
+                          >
                           <div class="d-flex gap-2">
-                            <input type="number" class="form-control form-control-sm" id="age-min" placeholder="Min" min="0">
-                            <input type="number" class="form-control form-control-sm" id="age-max" placeholder="Max" min="0">
+                            <input
+                              type="number"
+                              class="form-control form-control-sm"
+                              id="age-min"
+                              placeholder="Min"
+                              min="0"
+                            />
+                            <input
+                              type="number"
+                              class="form-control form-control-sm"
+                              id="age-max"
+                              placeholder="Max"
+                              min="0"
+                            />
                           </div>
                         </div>
-                        
+
                         <!-- Weight Filter -->
                         <div class="col-md-3">
-                          <label class="form-label text-farm-accent">Weight Range (kg)</label>
+                          <label class="form-label text-farm-accent"
+                            >Weight Range (kg)</label
+                          >
                           <div class="d-flex gap-2">
-                            <input type="number" class="form-control form-control-sm" id="weight-min" placeholder="Min" min="0" step="0.1">
-                            <input type="number" class="form-control form-control-sm" id="weight-max" placeholder="Max" min="0" step="0.1">
+                            <input
+                              type="number"
+                              class="form-control form-control-sm"
+                              id="weight-min"
+                              placeholder="Min"
+                              min="0"
+                              step="0.1"
+                            />
+                            <input
+                              type="number"
+                              class="form-control form-control-sm"
+                              id="weight-max"
+                              placeholder="Max"
+                              min="0"
+                              step="0.1"
+                            />
                           </div>
                         </div>
-                        
+
                         <!-- Health Filter -->
                         <div class="col-md-3">
-                          <label class="form-label text-farm-accent">Health Range (%)</label>
+                          <label class="form-label text-farm-accent"
+                            >Health Range (%)</label
+                          >
                           <div class="dual-range-container" data-type="health">
                             <div class="dual-range-track">
-                              <div class="dual-range-fill" id="health-fill"></div>
-                              <input type="range" class="dual-range-min" id="health-min" min="0" max="100" value="0">
-                              <input type="range" class="dual-range-max" id="health-max" min="0" max="100" value="100">
+                              <div
+                                class="dual-range-fill"
+                                id="health-fill"
+                              ></div>
+                              <input
+                                type="range"
+                                class="dual-range-min"
+                                id="health-min"
+                                min="0"
+                                max="100"
+                                value="0"
+                              />
+                              <input
+                                type="range"
+                                class="dual-range-max"
+                                id="health-max"
+                                min="0"
+                                max="100"
+                                value="100"
+                              />
                             </div>
                             <div class="dual-range-values">
-                              <span class="range-value" id="health-min-value">0%</span>
+                              <span class="range-value" id="health-min-value"
+                                >0%</span
+                              >
                               <span class="range-separator">-</span>
-                              <span class="range-value" id="health-max-value">100%</span>
+                              <span class="range-value" id="health-max-value"
+                                >100%</span
+                              >
                             </div>
                           </div>
                         </div>
-                        
+
                         <!-- Metabolism Filter -->
                         <div class="col-md-3">
-                          <label class="form-label text-farm-accent">Metabolism Range (%)</label>
-                          <div class="dual-range-container" data-type="metabolism">
+                          <label class="form-label text-farm-accent"
+                            >Metabolism Range (% of base)</label
+                          >
+                          <div
+                            class="dual-range-container"
+                            data-type="metabolism"
+                          >
                             <div class="dual-range-track">
-                              <div class="dual-range-fill" id="metabolism-fill"></div>
-                              <input type="range" class="dual-range-min" id="metabolism-min" min="0" max="100" value="0">
-                              <input type="range" class="dual-range-max" id="metabolism-max" min="0" max="100" value="100">
+                              <div
+                                class="dual-range-fill"
+                                id="metabolism-fill"
+                              ></div>
+                              <input
+                                type="range"
+                                class="dual-range-min"
+                                id="metabolism-min"
+                                min="0"
+                                max="200"
+                                value="0"
+                              />
+                              <input
+                                type="range"
+                                class="dual-range-max"
+                                id="metabolism-max"
+                                min="0"
+                                max="200"
+                                value="200"
+                              />
                             </div>
                             <div class="dual-range-values">
-                              <span class="range-value" id="metabolism-min-value">0%</span>
+                              <span
+                                class="range-value"
+                                id="metabolism-min-value"
+                                >0%</span
+                              >
                               <span class="range-separator">-</span>
-                              <span class="range-value" id="metabolism-max-value">100%</span>
+                              <span
+                                class="range-value"
+                                id="metabolism-max-value"
+                                >200%</span
+                              >
                             </div>
                           </div>
                         </div>
                       </div>
-                      
+
                       <div class="row g-3 mt-2">
                         <!-- Fertility Filter -->
                         <div class="col-md-3">
-                          <label class="form-label text-farm-accent">Fertility Range (%)</label>
-                          <div class="dual-range-container" data-type="fertility">
+                          <label class="form-label text-farm-accent"
+                            >Fertility Range (% of base)</label
+                          >
+                          <div
+                            class="dual-range-container"
+                            data-type="fertility"
+                          >
                             <div class="dual-range-track">
-                              <div class="dual-range-fill" id="fertility-fill"></div>
-                              <input type="range" class="dual-range-min" id="fertility-min" min="0" max="100" value="0">
-                              <input type="range" class="dual-range-max" id="fertility-max" min="0" max="100" value="100">
+                              <div
+                                class="dual-range-fill"
+                                id="fertility-fill"
+                              ></div>
+                              <input
+                                type="range"
+                                class="dual-range-min"
+                                id="fertility-min"
+                                min="0"
+                                max="200"
+                                value="0"
+                              />
+                              <input
+                                type="range"
+                                class="dual-range-max"
+                                id="fertility-max"
+                                min="0"
+                                max="200"
+                                value="200"
+                              />
                             </div>
                             <div class="dual-range-values">
-                              <span class="range-value" id="fertility-min-value">0%</span>
+                              <span class="range-value" id="fertility-min-value"
+                                >0%</span
+                              >
                               <span class="range-separator">-</span>
-                              <span class="range-value" id="fertility-max-value">100%</span>
+                              <span class="range-value" id="fertility-max-value"
+                                >200%</span
+                              >
                             </div>
                           </div>
                         </div>
-                        
+
                         <!-- Quality Filter -->
                         <div class="col-md-3">
-                          <label class="form-label text-farm-accent">Quality Range (%)</label>
+                          <label class="form-label text-farm-accent"
+                            >Quality Range (% of base)</label
+                          >
                           <div class="dual-range-container" data-type="quality">
                             <div class="dual-range-track">
-                              <div class="dual-range-fill" id="quality-fill"></div>
-                              <input type="range" class="dual-range-min" id="quality-min" min="0" max="100" value="0">
-                              <input type="range" class="dual-range-max" id="quality-max" min="0" max="100" value="100">
+                              <div
+                                class="dual-range-fill"
+                                id="quality-fill"
+                              ></div>
+                              <input
+                                type="range"
+                                class="dual-range-min"
+                                id="quality-min"
+                                min="0"
+                                max="200"
+                                value="0"
+                              />
+                              <input
+                                type="range"
+                                class="dual-range-max"
+                                id="quality-max"
+                                min="0"
+                                max="200"
+                                value="200"
+                              />
                             </div>
                             <div class="dual-range-values">
-                              <span class="range-value" id="quality-min-value">0%</span>
+                              <span class="range-value" id="quality-min-value"
+                                >0%</span
+                              >
                               <span class="range-separator">-</span>
-                              <span class="range-value" id="quality-max-value">100%</span>
+                              <span class="range-value" id="quality-max-value"
+                                >200%</span
+                              >
                             </div>
                           </div>
                         </div>
-                        
+
                         <!-- Productivity Filter -->
                         <div class="col-md-3">
-                          <label class="form-label text-farm-accent">Productivity Range (%)</label>
-                          <div class="dual-range-container" data-type="productivity">
+                          <label class="form-label text-farm-accent"
+                            >Productivity Range (% of base)</label
+                          >
+                          <div
+                            class="dual-range-container"
+                            data-type="productivity"
+                          >
                             <div class="dual-range-track">
-                              <div class="dual-range-fill" id="productivity-fill"></div>
-                              <input type="range" class="dual-range-min" id="productivity-min" min="0" max="100" value="0">
-                              <input type="range" class="dual-range-max" id="productivity-max" min="0" max="100" value="100">
+                              <div
+                                class="dual-range-fill"
+                                id="productivity-fill"
+                              ></div>
+                              <input
+                                type="range"
+                                class="dual-range-min"
+                                id="productivity-min"
+                                min="0"
+                                max="200"
+                                value="0"
+                              />
+                              <input
+                                type="range"
+                                class="dual-range-max"
+                                id="productivity-max"
+                                min="0"
+                                max="200"
+                                value="200"
+                              />
                             </div>
                             <div class="dual-range-values">
-                              <span class="range-value" id="productivity-min-value">0%</span>
+                              <span
+                                class="range-value"
+                                id="productivity-min-value"
+                                >0%</span
+                              >
                               <span class="range-separator">-</span>
-                              <span class="range-value" id="productivity-max-value">100%</span>
+                              <span
+                                class="range-value"
+                                id="productivity-max-value"
+                                >200%</span
+                              >
                             </div>
                           </div>
                         </div>
-                        
+
+                        <!-- Animal Type Filter -->
+                        <div class="col-md-3">
+                          <label class="form-label text-farm-accent"
+                            >Animal Type</label
+                          >
+                          <select
+                            class="form-select form-select-sm"
+                            id="animal-type-filter"
+                          >
+                            <option value="">All Types</option>
+                            <option value="COW">Cows</option>
+                            <option value="BULL">Bulls</option>
+                            <option value="SHEEP">Sheep</option>
+                            <option value="PIG">Pigs</option>
+                            <option value="CHICKEN">Chickens</option>
+                            <option value="HORSE">Horses</option>
+                          </select>
+                        </div>
+
                         <!-- Apply Filters Button -->
                         <div class="col-md-3 d-flex align-items-end">
-                          <button class="btn btn-farm-accent w-100" onclick="dashboard.applyFilters()">
+                          <button
+                            class="btn btn-farm-accent w-100"
+                            onclick="dashboard.applyFilters()"
+                          >
                             <i class="bi bi-search me-1"></i> Apply Filters
                           </button>
                         </div>
                       </div>
-                      
+
                       <!-- Active Filters Display -->
-                      <div class="mt-3" id="active-filters" style="display: none;">
+                      <div
+                        class="mt-3"
+                        id="active-filters"
+                        style="display: none"
+                      >
                         <small class="text-muted">Active Filters:</small>
                         <div id="active-filters-list" class="mt-1"></div>
                       </div>
@@ -584,7 +783,7 @@
                               <th>Gender</th>
                               <th>Health</th>
                               <th>Weight</th>
-                              <th>Reproduction</th>
+                              <th>Value</th>
                               <th>Status</th>
                               <th>Location</th>
                               <th>Actions</th>
@@ -1003,6 +1202,131 @@
                   Close
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Changes Modal -->
+      <div
+        class="modal fade"
+        id="dataChangesModal"
+        tabindex="-1"
+        aria-labelledby="dataChangesModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content bg-dark text-light">
+            <div class="modal-header border-farm-accent">
+              <h5 class="modal-title text-farm-accent" id="dataChangesModalLabel">
+                <i class="bi bi-arrow-repeat me-2"></i>Save Data Changes
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-12">
+                  <p class="text-muted mb-4">
+                    <i class="bi bi-info-circle me-1"></i>
+                    Changes detected since last refresh:
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Summary Cards -->
+              <div class="row mb-4" id="changesSummaryCards">
+                <!-- Cards will be populated by JavaScript -->
+              </div>
+
+              <!-- Detailed Changes Tabs -->
+              <ul class="nav nav-pills mb-3" id="changesTabList" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="livestock-changes-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#livestock-changes"
+                    type="button"
+                    role="tab"
+                  >
+                    <i class="bi bi-cow me-1"></i>Livestock
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="warnings-changes-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#warnings-changes"
+                    type="button"
+                    role="tab"
+                  >
+                    <i class="bi bi-exclamation-triangle me-1"></i>Warnings
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="statistics-changes-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#statistics-changes"
+                    type="button"
+                    role="tab"
+                  >
+                    <i class="bi bi-graph-up me-1"></i>Statistics
+                  </button>
+                </li>
+              </ul>
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="changesTabContent">
+                <!-- Livestock Changes -->
+                <div
+                  class="tab-pane fade show active"
+                  id="livestock-changes"
+                  role="tabpanel"
+                >
+                  <div id="livestockChangesContent">
+                    <!-- Content populated by JavaScript -->
+                  </div>
+                </div>
+
+                <!-- Warnings Changes -->
+                <div
+                  class="tab-pane fade"
+                  id="warnings-changes"
+                  role="tabpanel"
+                >
+                  <div id="warningsChangesContent">
+                    <!-- Content populated by JavaScript -->
+                  </div>
+                </div>
+
+                <!-- Statistics Changes -->
+                <div
+                  class="tab-pane fade"
+                  id="statistics-changes"
+                  role="tabpanel"
+                >
+                  <div id="statisticsChangesContent">
+                    <!-- Content populated by JavaScript -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer border-farm-accent">
+              <button
+                type="button"
+                class="btn btn-outline-farm-accent"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
             </div>
           </div>
         </div>

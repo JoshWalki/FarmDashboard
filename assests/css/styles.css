@@ -259,22 +259,6 @@ body.bg-dark {
   position: relative;
 }
 
-.display-4::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 3px;
-  background: linear-gradient(
-    90deg,
-    var(--farm-success) 0%,
-    var(--farm-accent) 100%
-  );
-  border-radius: 2px;
-}
-
 /* Alert positioning with farm theme */
 .alert-fixed {
   position: fixed;
@@ -631,14 +615,13 @@ th {
 
 .livestock-tag .tag-id {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   color: #2d2d2d;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
   letter-spacing: 0.5px;
 }
 
@@ -660,7 +643,11 @@ th {
 .dual-range-fill {
   position: absolute;
   height: 100%;
-  background: linear-gradient(90deg, var(--farm-success) 0%, var(--farm-accent) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--farm-success) 0%,
+    var(--farm-accent) 100%
+  );
   border-radius: 3px;
   top: 0;
   left: 0%;
@@ -761,7 +748,7 @@ th {
   border: 1px solid #555;
   min-width: 40px;
   text-align: center;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-weight: 600;
   color: var(--farm-accent);
   font-size: 0.8rem;
@@ -813,19 +800,28 @@ th {
 }
 
 .filter-active .slider-track {
-  background: linear-gradient(90deg, var(--farm-success) 0%, var(--farm-accent) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--farm-success) 0%,
+    var(--farm-accent) 100%
+  );
 }
 
 /* Warning Badge Styling */
 .badge.bg-farm-danger {
-  background: linear-gradient(135deg, var(--farm-danger) 0%, #cd0000 100%) !important;
+  background: linear-gradient(
+    135deg,
+    var(--farm-danger) 0%,
+    #cd0000 100%
+  ) !important;
   box-shadow: 0 2px 8px rgba(139, 0, 0, 0.4);
   border: 1px solid rgba(139, 0, 0, 0.6);
   animation: warningPulse 2s infinite;
 }
 
 @keyframes warningPulse {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 2px 8px rgba(139, 0, 0, 0.4);
   }
   50% {
@@ -834,14 +830,22 @@ th {
 }
 
 .badge.bg-farm-warning {
-  background: linear-gradient(135deg, var(--farm-warning) 0%, #daa520 100%) !important;
+  background: linear-gradient(
+    135deg,
+    var(--farm-warning) 0%,
+    #daa520 100%
+  ) !important;
   box-shadow: 0 2px 8px rgba(205, 133, 63, 0.4);
   border: 1px solid rgba(205, 133, 63, 0.6);
   color: #000 !important;
 }
 
 .badge.bg-farm-info {
-  background: linear-gradient(135deg, var(--farm-info) 0%, #5a9bd4 100%) !important;
+  background: linear-gradient(
+    135deg,
+    var(--farm-info) 0%,
+    #5a9bd4 100%
+  ) !important;
   box-shadow: 0 2px 8px rgba(70, 130, 180, 0.4);
   border: 1px solid rgba(70, 130, 180, 0.6);
 }
