@@ -1,54 +1,75 @@
-# 🐄 Farming Simulator 25 Dashboard
+![alt text](https://github.com/JoshWalki/FarmDashboard/blob/main/assests/img/logo.png "Logo")
 
-A powerful, modern web-based dashboard to analyze and manage your **Farming Simulator 25** save game data.
+### <code>API release late August.</code>
 
-## 📦 Features
+## 📦 Features (next release)
 
-- 📁 **Folder Integration**: Load your FS25 save folder.
-- 🐄 **Livestock Overview**:
-  - View detailed stats for each animal (health, age, reproduction, genetics, etc.)
-  - Filter by pregnant, lactating, or healthiest animals.
-  - Grouped by building and farm.
+- 📁 **Realtime Data streaming**: Loaded directly from your game, using our API.
+- 🐄 **Farm Overview**:
+
+  - Detailed stats for each animal (health, age, reproduction, genetics, etc.)
+  - Pastures and notices related to those pastures (low food, water, reproduction information, storage estimates)
+  - Crops and related information, including notices (harvast time, requirements, etc)
+  - View vehicles purchased with their information
+  - Notification history with important information
+
 - 📊 **Statistics & Health Tracking**:
+
   - Summary cards for herd insights (pregnant, lactating, average health).
   - Health bar visualizations and genetic data (if available).
-- 📤 **Export Tools**:
-  - Export your livestock data in **CSV**, **Excel**, **PDF**, or **printable** formats.
-- 👨‍🌾 **Multi-Farm Support**:
-  - Auto-detects and allows selection of multiple player-owned farms in a save.
-- 📚 **Built with Modern Tools**:
-  - Bootstrap 5, DataTables, localStorage for persistent save paths.
+
 - 🔜 **Much, much more to come**
 
-> 🔧 Other modules like vehicles, fields, economy, and properties are scaffolded and planned for future updates.
+## 🐮 Installation
 
-## 🐮 How to Use
+#### Prerequisites
 
-1. Open the game and load your save.
-2. Open the app in your browser by launching `index.html`.
-3. Click **"Choose Save Folder"** and select your local FS25 save directory.
-   ```
-   Example path:
-   C:\Users\[YourName]\AppData\Local\Packages\GIANTSSoftware.FarmingSimulator25PC_fa8jxm5fj0esw\LocalCache\Local\save
-   ```
-4. Your save data will be parsed and presented on the dashboard.
+- Node.js (https://nodejs.org/en/download)
+- RealisticLivestock (https://github.com/Arrow-kb/FS25_RealisticLivestock)
 
-> ⚠️ **Info**: FS25 uses encrytped data. When your save is laoded, the files are moved to \Local\save. Thus, the data can only be parsed when your game is open with the save loaded.\*
+#### Install steps
 
-## 📌 TODO / Planned Features
+1. Copy the `FS25_FarmDashboard` folder to your Farming Simulator 25 mods directory:
 
-- ✅ Livestock Management
-- 🔜 Crop management and insights
-- 🔜 Vehicle Fleet Management
-- 🔜 Field Tracking
-- 🔜 Economy & Finances
-- 🔜 Property Overview
-- 🔜 Genetic Insights & Breeding Suggestions
-- 🔜 Store save game data to local storage\*
+   - Default: `C:\Users\[username]\Documents\My Games\FarmingSimulator2025\mods\`
+   - MS Store/xbox app: `C:\Users\[username]\AppData\Local\Packages\GIANTSSoftware.FarmingSimulator25PC_fa8jxm5fj0esw\LocalCache\Local\mods\`
+
+2. Run setup.bat. Ensure there are no errors.
+
+3. Run start-dashboard.bat.
+
+   - Dashboard runs at http://localhost:8766/
+
+4. Start your game, load your save with the mod enabled.
+
+## 💡 How It Works
+
+The mod runs in the background and collects data from various game systems:
+
+- Data Collector runs every second to find updated data
+- Written data is fed through our API to the dashboard
+- Direct API for various game-providing data
+  - Some data is not exposed to the API. These values use manual calculations and might not be accurate.
+
+### Local File Fallback
+
+- All data exports to: `[FS25 directory]\modSettings\FS25_FarmDashboard\data.json`
+- Can be loaded when offline though changes are not live.
+
+## 📌 Important Notices
+
+- This is untested in multiplayer
+- I suggest not opening the dashboard to the public
+- This can be used across all devices on your local network (mobile, laptop, etc)
+- RealisticLivestock is highly recommended for better data
 
 ---
 
 **JoshWalki**
 Built with ❤️ for FS25 players.
 
-> This is a community fan-made tool and is not affiliated with GIANTS Software or the official Farming Simulator team.
+## Credits
+    
+- Based on game data structures from FS25
+- Compatible with RealisticLivestock by Arrow and is highly recommended for better data insights
+  - https://github.com/Arrow-kb/FS25_RealisticLivestock
