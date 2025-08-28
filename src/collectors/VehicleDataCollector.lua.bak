@@ -1,0 +1,279 @@
+VehicleDataCollector = {}
+
+function VehicleDataCollector:init()
+    print("[FarmDashboard] Vehicle data collector initialized")
+end
+
+function VehicleDataCollector:collect()
+    local vehicleData = {}
+    
+    if not _G.g_currentMission or not _G.g_currentMission.vehicles then
+        print("[FarmDashboard] No vehicles found in mission")
+        return vehicleData
+    end
+    
+    local vehicleCount = 0
+    for _, vehicle in pairs(_G.g_currentMission.vehicles) do
+        vehicleCount = vehicleCount + 1
+        local success, vData = pcall(function()
+            return self:collectVehicleData(vehicle)
+        end)
+        
+        if success and vData then
+            table.insert(vehicleData, vData)
+        elseif not success then
+            print("[FarmDashboard] Error collecting vehicle data: " .. tostring(vData))
+        end
+    end
+    
+    print("[FarmDashboard] Collected data for " .. #vehicleData .. " of " .. vehicleCount .. " vehicles")
+    return vehicleData
+end
+
+function VehicleDataCollector:collectVehicleData(vehicle)
+    if not vehicle then return nil end
+    
+    -- Safe getName call
+    local vehicleName = "Unknown"
+    if vehicle.getName then
+        local success, name = pcall(function() return vehicle:getName() end)
+        if success and name then
+            vehicleName = name
+        end
+    end
+    
+    local data = {
+        id = vehicle.id or 0,
+        name = vehicleName,
+        brand = vehicle.brand or "Unknown",
+        category = vehicle.typeName or "Unknown",
+        price = vehicle.price or 0,
+        age = vehicle.age or 0,
+        operatingTime = vehicle.operatingTime or 0,
+        position = self:getPosition(vehicle),
+        ownerFarmId = (vehicle.getOwnerFarmId and vehicle:getOwnerFarmId()) or 0,
+        isActive = (vehicle.getIsActive and vehicle:getIsActive()) or false,
+        isControlled = (vehicle.getIsControlled and vehicle:getIsControlled()) or false,
+        isEnterable = vehicle.spec_enterable ~= nil,
+        isDrivable = vehicle.spec_drivable ~= nil,
+        isMotorized = vehicle.spec_motorized ~= nil,
+        fuelLevel = 0,
+        fuelCapacity = 0,
+        defLevel = 0,
+        defCapacity = 0,
+        damage = 0,
+        wearLevel = 0,
+        dirtLevel = 0,
+        fillLevels = {},
+        attachedImplements = {},
+        speed = 0,
+        engineOn = false,
+        enginePower = 0,
+        engineLoadPercentage = 0,
+        cruiseControl = false,
+        currentLightState = 0,
+        vehicleType = self:determineVehicleType(vehicle)
+    }
+    
+    if vehicle.spec_motorized then
+        local spec = vehicle.spec_motorized
+        data.engineOn = spec.isMotorStarted or false
+        data.speed = (vehicle.getLastSpeed and vehicle:getLastSpeed()) or 0
+        data.enginePower = spec.motor and spec.motor.peakMotorPower or 0
+        data.engineLoadPercentage = spec.smoothedLoadPercentage or 0
+        
+        if spec.consumersByFillTypeName then
+            local diesel = spec.consumersByFillTypeName["DIESEL"]
+            if diesel then
+                data.fuelLevel = diesel.fillLevel or 0
+                data.fuelCapacity = diesel.capacity or 0
+            end
+            
+            local def = spec.consumersByFillTypeName["DEF"]
+            if def then
+                data.defLevel = def.fillLevel or 0
+                data.defCapacity = def.capacity or 0
+            end
+            
+            local electricCharge = spec.consumersByFillTypeName["ELECTRICCHARGE"]
+            if electricCharge then
+                data.electricLevel = electricCharge.fillLevel or 0
+                data.electricCapacity = electricCharge.capacity or 0
+            end
+            
+            local methane = spec.consumersByFillTypeName["METHANE"]
+            if methane then
+                data.methaneLevel = methane.fillLevel or 0
+                data.methaneCapacity = methane.capacity or 0
+            end
+        end
+    end
+    
+    if vehicle.spec_lights then
+        data.currentLightState = vehicle.spec_lights.currentLightState or 0
+    end
+    
+    if vehicle.spec_drivable and vehicle.spec_drivable.cruiseControl then
+        data.cruiseControl = vehicle.spec_drivable.cruiseControl.state ~= 0
+        data.cruiseControlSpeed = vehicle.spec_drivable.cruiseControl.speed or 0
+    end
+    
+    if vehicle.getDamageAmount then
+        local success, damage = pcall(function() return vehicle:getDamageAmount() end)
+        if success then
+            data.damage = damage or 0
+        end
+    end
+    
+    if vehicle.spec_wearable then
+        data.wearLevel = vehicle.spec_wearable.damage or 0
+    end
+    
+    if vehicle.spec_washable and vehicle.getDirtAmount then
+        local success, dirt = pcall(function() return vehicle:getDirtAmount() end)
+        if success then
+            data.dirtLevel = dirt or 0
+        end
+    end
+    
+    data.fillLevels = self:collectVehicleFillLevels(vehicle)
+    
+    if vehicle.getAttachedImplements then
+        local implements = vehicle:getAttachedImplements()
+        if implements then
+            for _, implement in pairs(implements) do
+                if implement.object then
+                    local implementName = "Unknown"
+                    if implement.object.getName then
+                        local success, name = pcall(function() return implement.object:getName() end)
+                        if success and name then
+                            implementName = name
+                        end
+                    end
+                    
+                    local implementData = {
+                        name = implementName,
+                        id = implement.object.id or 0,
+                        brand = implement.object.brand or "Unknown",
+                        category = implement.object.typeName or "Unknown"
+                    }
+                    
+                    if implement.object.spec_fillUnit then
+                        implementData.fillLevels = self:collectVehicleFillLevels(implement.object)
+                    end
+                    
+                    if implement.object.spec_workArea then
+                        implementData.isLowered = (implement.object.getIsLowered and implement.object:getIsLowered()) or false
+                        implementData.workAreaActive = (implement.object.getIsTurnedOn and implement.object:getIsTurnedOn()) or false
+                    end
+                    
+                    table.insert(data.attachedImplements, implementData)
+                end
+            end
+        end
+    end
+    
+    if vehicle.spec_workArea then
+        data.isLowered = (vehicle.getIsLowered and vehicle:getIsLowered()) or false
+        data.workAreaActive = (vehicle.getIsTurnedOn and vehicle:getIsTurnedOn()) or false
+    end
+    
+    if vehicle.spec_harvester then
+        data.harvesterActive = (vehicle.getIsTurnedOn and vehicle:getIsTurnedOn()) or false
+        data.isThreshing = vehicle.spec_harvester.isThreshing or false
+    end
+    
+    if vehicle.spec_trailer then
+        data.tipState = vehicle.spec_trailer.tipState or 0
+    end
+    
+    return data
+end
+
+function VehicleDataCollector:collectVehicleFillLevels(vehicle)
+    local fillLevels = {}
+    
+    if vehicle.spec_fillUnit then
+        local spec = vehicle.spec_fillUnit
+        if spec.fillUnits then
+            for _, fillUnit in pairs(spec.fillUnits) do
+                local fillTypeName = "unknown"
+                if fillUnit.fillType then
+                    fillTypeName = _G.g_fillTypeManager:getFillTypeNameByIndex(fillUnit.fillType) or "unknown"
+                end
+                
+                fillLevels[fillTypeName] = {
+                    level = fillUnit.fillLevel or 0,
+                    capacity = fillUnit.capacity or 0
+                }
+            end
+        end
+    end
+    
+    return fillLevels
+end
+
+function VehicleDataCollector:getPosition(vehicle)
+    if vehicle and vehicle.rootNode then
+        -- Wrap in pcall to prevent crashes from invalid nodes
+        local success, x, y, z = pcall(getWorldTranslation, vehicle.rootNode)
+        if success and x and y and z then
+            return {x = x, y = y, z = z}
+        end
+    end
+    return {x = 0, y = 0, z = 0}
+end
+
+function VehicleDataCollector:determineVehicleType(vehicle)
+    if not vehicle then return "unknown" end
+    
+    -- Check for specific vehicle types based on specializations
+    if vehicle.spec_harvester then
+        return "harvester"
+    elseif vehicle.spec_combine then
+        return "combine"
+    elseif vehicle.spec_sprayer then
+        return "sprayer"
+    elseif vehicle.spec_spreader then
+        return "spreader"
+    elseif vehicle.spec_cultivator then
+        return "cultivator"
+    elseif vehicle.spec_plow then
+        return "plow"
+    elseif vehicle.spec_sowingMachine then
+        return "seeder"
+    elseif vehicle.spec_mower then
+        return "mower"
+    elseif vehicle.spec_tedder then
+        return "tedder"
+    elseif vehicle.spec_windrower then
+        return "windrower"
+    elseif vehicle.spec_baler then
+        return "baler"
+    elseif vehicle.spec_baleLoader then
+        return "baleLoader"
+    elseif vehicle.spec_trailer then
+        return "trailer"
+    elseif vehicle.spec_forwarder then
+        return "forwarder"
+    elseif vehicle.spec_woodHarvester then
+        return "woodHarvester"
+    elseif vehicle.spec_motorized then
+        -- Further categorize motorized vehicles
+        if vehicle.spec_wheels and vehicle.spec_wheels.wheels then
+            local numWheels = #vehicle.spec_wheels.wheels
+            if numWheels <= 2 then
+                return "wheelLoader"
+            elseif vehicle.typeName and string.find(string.lower(vehicle.typeName), "truck") then
+                return "truck"
+            else
+                return "tractor"
+            end
+        end
+        return "motorized"
+    elseif vehicle.spec_attachable then
+        return "implement"
+    else
+        return "equipment"
+    end
+end

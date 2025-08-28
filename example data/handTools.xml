@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<handTools>
-    <handTool filename="data/handTools/stihl/ms261/ms261.xml" uniqueId="HandToole08ddb8197d718c75a3f52383a4d2419" farmId="1" age="17.000000">
-        <holder uniqueId="jWm0YKUKuD2Rmmb9cWkVYIYZlgn2QMsShCuUndOW0gU="/>
-    </handTool>
-    <handTool filename="data/handTools/stihl/ms261/ms261.xml" uniqueId="HandTool3f9328c8d69912a8b12d1444b476c065" farmId="1" age="13.000000">
-        <holder uniqueId="jWm0YKUKuD2Rmmb9cWkVYIYZlgn2QMsShCuUndOW0gU="/>
-    </handTool>
-</handTools>

@@ -1,0 +1,324 @@
+[EconomyCollector] Added FLOUR to Pizzeria at $1022.70
+[EconomyCollector] Added CHEESE to Pizzeria at $2929.74
+[EconomyCollector] Added TOMATO to Pizzeria at $672.76
+[EconomyCollector] Added MILK to Pizzeria at $1139.34
+[EconomyCollector] Added EGG to Pizzeria at $1728.57
+[EconomyCollector] Added OLIVE_OIL to Pizzeria at $3165.00
+[EconomyCollector] Added FABRIC to Tailor Shop at $4604.03
+[EconomyCollector] Added WOOL to Tailor Shop at $1081.95
+[EconomyCollector] Added COTTON to Tailor Shop at $1910.46
+[EconomyCollector] Added TOMATO to Ketchup Production at $672.76
+[EconomyCollector] Added SUGAR to Ketchup Production at $776.66
+[EconomyCollector] Scanning 96 placeables for stations
+[EconomyCollector] Found 0 total production points
+[EconomyCollector] Total fill types found: 232
+[EconomyCollector] Milk types found: MILK, GOATMILK, BUFFALOMILK, MILK_BOTTLED, GOATMILK_BOTTLED, BUFFALOMILK_BOTTLED, CHOCOLATE_MILK, CONDENSED_MILK, CHOCOLATEMILKCOW, CHOCOLATEMILKGOAT, CHOCOLATEMILKBUFFALO
+[EconomyCollector] Animal products found: BUFFALOMOZZARELLA, GOATCHEESE, MANURE, LIQUIDMANURE, COW_WATERBUFFALO, GOAT, BULL_WATERBUFFALO, RAM_GOAT
+[EconomyCollector] All fill types: UNKNOWN, WHEAT, BARLEY, OAT, CANOLA, SORGHUM, SUNFLOWER, SOYBEAN, MAIZE, POTATO, SUGARBEET, BEETROOT, CARROT, PARSNIP, COTTON, RICELONGGRAIN, RICE, GREENBEAN, PEA, SPINACH, SUGARCANE, WOOD, WOODCHIPS, SUGARBEET_CUT, SILAGE, GRASS, MEADOW, GRASS_WINDROW, DRYGRASS, DRYGRASS_WINDROW, STRAW, WHEAT_CUT, BARLEY_CUT, OAT_CUT, CANOLA_CUT, SOYBEAN_CUT, GRAPE, OLIVE, MILK, GOATMILK, BUFFALOMILK, WOOL, EGG, HONEY, LETTUCE, TOMATO, STRAWBERRY, SPRING_ONION, NAPACABBAGE, CHILLI, GARLIC, ENOKI, OYSTER, BOARDS, PLANKS, WOODBEAM, PREFABWALL, FLOUR, RICEFLOUR, BREAD, CAKE, MILK_BOTTLED, GOATMILK_BOTTLED, BUFFALOMILK_BOTTLED, BUTTER, CHEESE, BUFFALOMOZZARELLA, GOATCHEESE, CHOCOLATE, POTATOCHIPS, RICEROLLS, FERMENTEDNAPACABBAGE, PRESERVEDCARROTS, PRESERVEDPARSNIP, PRESERVEDBEETROOT, NOODLESOUP, SOUPCANSMIXED, SOUPCANSCARROTS, SOUPCANSPARSNIP, SOUPCANSBEETROOT, SOUPCANSPOTATO, FABRIC, CLOTHES, SUGAR, CEREAL, FURNITURE, CARTONROLL, PAPERROLL, PIANO, WAGON, TOYTRACTOR, SUNFLOWER_OIL, CANOLA_OIL, OLIVE_OIL, RICE_OIL, RAISINS, GRAPEJUICE, CEMENT, BARREL, BATHTUB, BUCKET, ROOFPLATES, ROPE, CANNED_PEAS, CEMENTBRICKS, SPINACH_BAGS, JARRED_GREENBEAN, RICE_BAGS, RICE_BOXES, SEEDS, STONE, MANURE, LIQUIDMANURE, DIGESTATE, FORAGE, FORAGE_MIXING, WATER, CHAFF, TREESAPLINGS, TREE, OILSEEDRADISH, POPLAR, DIESEL, DEF, AIR, ELECTRICCHARGE, METHANE, SNOW, ROADSALT, ROUNDBALE, ROUNDBALE_GRASS, ROUNDBALE_DRYGRASS, ROUNDBALE_COTTON, ROUNDBALE_WOOD, SQUAREBALE, SQUAREBALE_GRASS, SQUAREBALE_DRYGRASS, SQUAREBALE_COTTON, SQUAREBALE_WOOD, BALE_WRAP, BALE_NET, BALE_TWINE, RICESAPLINGS, FERTILIZER, LIQUIDFERTILIZER, PIGFOOD, TARP, LIME, HERBICIDE, SILAGE_ADDITIVE, MINERAL_FEED, WEED, HORSE_PALOMINO, HORSE_BLACK, HORSE_BAY, HORSE_PINTO, HORSE_SEAL_BROWN, HORSE_GRAY, HORSE_DUN, HORSE_CHESTNUT, COW_SWISS_BROWN, COW_HOLSTEIN, COW_LIMOUSIN, COW_ANGUS, COW_WATERBUFFALO, SHEEP_LANDRACE, SHEEP_SWISS_MOUNTAIN, SHEEP_STEINSCHAF, SHEEP_BLACK_WELSH, PIG_LANDRACE, PIG_BLACK_PIED, PIG_BERKSHIRE, CHICKEN, CHICKEN_ROOSTER, GOAT, CORN_DRY, ALFALFA, ALFALFA_WINDROW, DRYALFALFA_WINDROW, DRYALFALFA, APPLE, ORANGE, LEMON, PUMPKIN, PLUM, PEAR, CORNFLOUR, CORNFLOUR_FINE, CORNBREAD, APPLEPIE, YOGURT, KEFIR, POPCORN, POPCORN_BUTTER, PIZZA, KETCHUP, YOGURT_STRAWBERRY, CHOCOLATE_MILK, CREAM, CONDENSED_MILK, PROPANE, ROUNDBALE_ALFALFA, ROUNDBALE_DRYALFALFA, SQUAREBALE_ALFALFA, SQUAREBALE_DRYALFALFA, DARKCHOCOLATE, CHOCOLATEMILKCOW, CHOCOLATEMILKGOAT, CHOCOLATEMILKBUFFALO, BULL_SWISS_BROWN, BULL_HOLSTEIN, BULL_ANGUS, BULL_LIMOUSIN, COW_HEREFORD, BULL_HEREFORD, BULL_WATERBUFFALO, BOAR_LANDRACE, BOAR_BLACK_PIED, BOAR_BERKSHIRE, RAM_LANDRACE, RAM_STEINSCHAF, RAM_SWISS_MOUNTAIN, RAM_BLACK_WELSH, RAM_GOAT, STALLION_GRAY, STALLION_PINTO, STALLION_PALOMINO, STALLION_CHESTNUT, STALLION_BAY, STALLION_BLACK, STALLION_SEAL_BROWN, STALLION_DUN
+[EconomyCollector] NameToIndex total items: 232
+[EconomyCollector] NameToIndex additional milk items: BUFFALOMILK_BOTTLED, BUFFALOMILK, CHOCOLATEMILKBUFFALO, CHOCOLATEMILKGOAT, CHOCOLATEMILKCOW, CONDENSED_MILK, CHOCOLATE_MILK, MILK_BOTTLED, GOATMILK, MILK, GOATMILK_BOTTLED
+[EconomyCollector] NameToIndex additional animal items: MANURE, RAM_GOAT, BULL_WATERBUFFALO, BUFFALOMOZZARELLA, COW_WATERBUFFALO, GOAT, GOATCHEESE, LIQUIDMANURE
+[EconomyCollector] Adding forced items...
+[EconomyCollector] Forced item added: SLURRY at $50
+[EconomyCollector] Forced item added: BUFFALO_MILK at $1400
+[EconomyCollector] Forced item added: GOAT_MILK at $700
+[EconomyCollector] Forced item added: SORGHUM at $900
+[EconomyCollector] Forced item added: STRAWBERRIES at $2500
+[EconomyCollector] Total forced items added: 5
+[EconomyCollector] Adding station: Unknown (with no prices)
+[EconomyCollector] Adding station: Unknown (with no prices)
+[EconomyCollector] Adding station: Unknown (with no prices)
+[EconomyCollector] Adding station: Unknown (with no prices)
+[EconomyCollector] Adding station: Unknown (with no prices)
+[EconomyCollector] Adding station: Unknown (with no prices)
+[EconomyCollector] Adding station: Unknown (with no prices)
+[EconomyCollector] Adding station: Unknown (with no prices)
+[EconomyCollector] Adding station: Unknown (with no prices)
+[EconomyCollector] Adding station: Unknown (with no prices)
+[EconomyCollector] Adding station: Unknown (with no prices)
+[EconomyCollector] Adding station: Unknown (with no prices)
+[EconomyCollector] Adding station: Unknown (with no prices)
+[EconomyCollector] Adding station: Unknown (with no prices)
+[EconomyCollector] Adding station: Unknown (with no prices)
+[EconomyCollector] Adding station: Unknown (with no prices)
+[EconomyCollector] Adding station: Unknown (with no prices)
+[EconomyCollector] Adding station: Unknown (with no prices)
+[EconomyCollector] Adding station: Alma Logistics (with no prices)
+[EconomyCollector] Adding station: Popcorn Production (with no prices)
+[EconomyCollector] Adding station: Biogas Plant (with no prices)
+[EconomyCollector] Adding station: Sawmill (Wood-Mizer LT15) (with no prices)
+[EconomyCollector] Adding station: Cow Barn (with no prices)
+[EconomyCollector] Adding station: Grain Silo (with no prices)
+[EconomyCollector] Adding station: Ketchup Production (with no prices)
+[EconomyCollector] Adding station: Tailor Shop (with no prices)
+[EconomyCollector] Adding station: Corn Dryer (with no prices)
+[EconomyCollector] Adding station: Pigsty (with no prices)
+[EconomyCollector] Adding station: Grain West Silo (with no prices)
+[EconomyCollector] Adding station: Dairy (with no prices)
+[EconomyCollector] Adding station: Methane Selling Station (with no prices)
+[EconomyCollector] Adding station: Pizzeria (with no prices)
+[EconomyCollector] Adding station: Grain Sell Point (with 12 prices)
+[EconomyCollector] Adding station: Bale Sell Point (with 6 prices)
+[EconomyCollector] Adding station: Hardware Store (with 7 prices)
+[EconomyCollector] Adding station: Supermarket (with 32 prices)
+[EconomyCollector] Adding station: Farm Silo (with no prices)
+[EconomyCollector] Adding station: Grain Mill (with no prices)
+[EconomyCollector] Adding station: Bakery (with no prices)
+[EconomyCollector] Adding station: Marshall (with 51 prices)
+[EconomyCollector] Adding station: Cow Barn (large) (with no prices)
+[EconomyCollector] Adding station: Horse Stable (with no prices)
+[EconomyCollector] Adding station: Grain Elevator Museum (with no prices)
+[EconomyCollector] Starting dynamic station-product discovery...
+[EconomyCollector] === PLACEABLE DISCOVERY ===
+[EconomyCollector] Found 96 total placeables in game
+[EconomyCollector] Placeable: 'Marshall' - Specs: sellingStation
+[EconomyCollector] Placeable: 'Sawmill (Wood-Mizer LT15)' - Specs: productionPoint
+[EconomyCollector] Placeable: 'Biogas Plant' - Specs: productionPoint
+[EconomyCollector] Placeable: 'Corn Dryer' - Specs: productionPoint
+[EconomyCollector] Placeable: 'Grain Mill' - Specs: productionPoint
+[EconomyCollector] Placeable: 'Bakery' - Specs: productionPoint
+[EconomyCollector] Placeable: 'Tailor Shop' - Specs: productionPoint
+[EconomyCollector] Placeable: 'Pizzeria' - Specs: productionPoint
+[EconomyCollector] Placeable: 'Dairy' - Specs: productionPoint
+[EconomyCollector] Placeable: 'Ketchup Production' - Specs: productionPoint
+[EconomyCollector] Placeable: 'Popcorn Production' - Specs: productionPoint
+[EconomyCollector] Placeable: 'Supermarket' - Specs: sellingStation
+[EconomyCollector] Placeable: 'Hardware Store' - Specs: sellingStation
+[EconomyCollector] Placeable: 'Bale Sell Point' - Specs: sellingStation
+[EconomyCollector] Placeable: 'Grain Sell Point' - Specs: sellingStation
+[EconomyCollector] Placeable: 'Methane Selling Station' - Specs: sellingStation
+[EconomyCollector] Placeable: 'Alma Logistics' - Specs: sellingStation
+[EconomyCollector] === END PLACEABLE DISCOVERY ===
+[EconomyCollector] Found 232 fill types to test
+[EconomyCollector] Testing station: Unknown
+[EconomyCollector] Could not find actual placeable for station: Unknown
+[EconomyCollector] Testing station: Unknown
+[EconomyCollector] Could not find actual placeable for station: Unknown
+[EconomyCollector] Testing station: Unknown
+[EconomyCollector] Could not find actual placeable for station: Unknown
+[EconomyCollector] Testing station: Unknown
+[EconomyCollector] Could not find actual placeable for station: Unknown
+[EconomyCollector] Testing station: Unknown
+[EconomyCollector] Could not find actual placeable for station: Unknown
+[EconomyCollector] Testing station: Unknown
+[EconomyCollector] Could not find actual placeable for station: Unknown
+[EconomyCollector] Testing station: Unknown
+[EconomyCollector] Could not find actual placeable for station: Unknown
+[EconomyCollector] Testing station: Unknown
+[EconomyCollector] Could not find actual placeable for station: Unknown
+[EconomyCollector] Testing station: Unknown
+[EconomyCollector] Could not find actual placeable for station: Unknown
+[EconomyCollector] Testing station: Unknown
+[EconomyCollector] Could not find actual placeable for station: Unknown
+[EconomyCollector] Testing station: Unknown
+[EconomyCollector] Could not find actual placeable for station: Unknown
+[EconomyCollector] Testing station: Unknown
+[EconomyCollector] Could not find actual placeable for station: Unknown
+[EconomyCollector] Testing station: Unknown
+[EconomyCollector] Could not find actual placeable for station: Unknown
+[EconomyCollector] Testing station: Unknown
+[EconomyCollector] Could not find actual placeable for station: Unknown
+[EconomyCollector] Testing station: Unknown
+[EconomyCollector] Could not find actual placeable for station: Unknown
+[EconomyCollector] Testing station: Unknown
+[EconomyCollector] Could not find actual placeable for station: Unknown
+[EconomyCollector] Testing station: Unknown
+[EconomyCollector] Could not find actual placeable for station: Unknown
+[EconomyCollector] Testing station: Unknown
+[EconomyCollector] Could not find actual placeable for station: Unknown
+[EconomyCollector] Testing station: Alma Logistics
+[EconomyCollector] Found matching placeable: Alma Logistics
+[EconomyCollector] No new products found for Alma Logistics
+[EconomyCollector] Testing station: Popcorn Production
+[EconomyCollector] Found matching placeable: Popcorn Production
+[EconomyCollector] No new products found for Popcorn Production
+[EconomyCollector] Testing station: Biogas Plant
+[EconomyCollector] Found matching placeable: Biogas Plant
+[EconomyCollector] No new products found for Biogas Plant
+[EconomyCollector] Testing station: Sawmill (Wood-Mizer LT15)
+[EconomyCollector] Could not find actual placeable for station: Sawmill (Wood-Mizer LT15)
+[EconomyCollector] Testing station: Cow Barn
+[EconomyCollector] Found matching placeable: Cow Barn
+[EconomyCollector] No new products found for Cow Barn
+[EconomyCollector] Testing station: Grain Silo
+[EconomyCollector] Found matching placeable: Grain Silo
+[EconomyCollector] No new products found for Grain Silo
+[EconomyCollector] Testing station: Ketchup Production
+[EconomyCollector] Found matching placeable: Ketchup Production
+[EconomyCollector] No new products found for Ketchup Production
+[EconomyCollector] Testing station: Tailor Shop
+[EconomyCollector] Found matching placeable: Tailor Shop
+[EconomyCollector] No new products found for Tailor Shop
+[EconomyCollector] Testing station: Corn Dryer
+[EconomyCollector] Found matching placeable: Corn Dryer
+[EconomyCollector] No new products found for Corn Dryer
+[EconomyCollector] Testing station: Pigsty
+[EconomyCollector] Found matching placeable: Pigsty
+[EconomyCollector] No new products found for Pigsty
+[EconomyCollector] Testing station: Grain West Silo
+[EconomyCollector] Found matching placeable: Grain West Silo
+[EconomyCollector] No new products found for Grain West Silo
+[EconomyCollector] Testing station: Dairy
+[EconomyCollector] Found matching placeable: Dairy
+[EconomyCollector] No new products found for Dairy
+[EconomyCollector] Testing station: Methane Selling Station
+[EconomyCollector] Found matching placeable: Methane Selling Station
+[EconomyCollector] No new products found for Methane Selling Station
+[EconomyCollector] Testing station: Pizzeria
+[EconomyCollector] Found matching placeable: Pizzeria
+[EconomyCollector] No new products found for Pizzeria
+[EconomyCollector] Testing station: Grain Sell Point
+[EconomyCollector] Found matching placeable: Grain Sell Point
+[EconomyCollector] No new products found for Grain Sell Point
+[EconomyCollector] Testing station: Bale Sell Point
+[EconomyCollector] Found matching placeable: Bale Sell Point
+[EconomyCollector] No new products found for Bale Sell Point
+[EconomyCollector] Testing station: Hardware Store
+[EconomyCollector] Found matching placeable: Hardware Store
+[EconomyCollector] No new products found for Hardware Store
+[EconomyCollector] Testing station: Supermarket
+[EconomyCollector] Found matching placeable: Supermarket
+[EconomyCollector] No new products found for Supermarket
+[EconomyCollector] Testing station: Farm Silo
+[EconomyCollector] Found matching placeable: Farm Silo
+[EconomyCollector] No new products found for Farm Silo
+[EconomyCollector] Testing station: Grain Mill
+[EconomyCollector] Found matching placeable: Grain Mill
+[EconomyCollector] No new products found for Grain Mill
+[EconomyCollector] Testing station: Bakery
+[EconomyCollector] Found matching placeable: Bakery
+[EconomyCollector] No new products found for Bakery
+[EconomyCollector] Testing station: Marshall
+[EconomyCollector] Found matching placeable: Marshall
+[EconomyCollector] No new products found for Marshall
+[EconomyCollector] Testing station: Cow Barn (large)
+[EconomyCollector] Found matching placeable: Cow Barn
+[EconomyCollector] No new products found for Cow Barn (large)
+[EconomyCollector] Testing station: Horse Stable
+[EconomyCollector] Found matching placeable: Horse Stable
+[EconomyCollector] No new products found for Horse Stable
+[EconomyCollector] Testing station: Grain Elevator Museum
+[EconomyCollector] Found matching placeable: Grain Elevator Museum
+[EconomyCollector] No new products found for Grain Elevator Museum
+[EconomyCollector] Force-adding comprehensive Bakery and Dairy stations...
+[EconomyCollector] Bakery exists with products: false
+[EconomyCollector] Dairy exists with products: false
+[EconomyCollector] Found MILK market price: $1372.56
+[EconomyCollector] Added MILK to Bakery at $1098.04
+[EconomyCollector] No market price found for GOATMILK
+[EconomyCollector] No market price found for BUFFALOMILK
+[EconomyCollector] Found GOAT_MILK market price: $700.00
+[EconomyCollector] Added GOAT_MILK to Bakery at $560.00
+[EconomyCollector] Found BUFFALO_MILK market price: $1400.00
+[EconomyCollector] Added BUFFALO_MILK to Bakery at $1120.00
+[EconomyCollector] No market price found for MILK_BOTTLED
+[EconomyCollector] No market price found for GOATMILK_BOTTLED
+[EconomyCollector] No market price found for BUFFALOMILK_BOTTLED
+[EconomyCollector] Found FLOUR market price: $1232.64
+[EconomyCollector] Added FLOUR to Bakery at $986.11
+[EconomyCollector] Found SUGAR market price: $935.69
+[EconomyCollector] Added SUGAR to Bakery at $748.55
+[EconomyCollector] Found EGG market price: $2083.78
+[EconomyCollector] Added EGG to Bakery at $1667.02
+[EconomyCollector] Found BUTTER market price: $2196.09
+[EconomyCollector] Added BUTTER to Bakery at $1756.87
+[EconomyCollector] Found HONEY market price: $1693.22
+[EconomyCollector] Added HONEY to Bakery at $1354.57
+[EconomyCollector] Found BREAD market price: $2947.62
+[EconomyCollector] Added BREAD to Bakery at $2358.10
+[EconomyCollector] Found CAKE market price: $6470.62
+[EconomyCollector] Added CAKE to Bakery at $5176.49
+[EconomyCollector] Force-added Bakery with 10 products
+[EconomyCollector] Added MILK to Dairy at $1166.67
+[EconomyCollector] No market price found for GOATMILK
+[EconomyCollector] No market price found for BUFFALOMILK
+[EconomyCollector] Added GOAT_MILK to Dairy at $595.00
+[EconomyCollector] Added BUFFALO_MILK to Dairy at $1190.00
+[EconomyCollector] No market price found for MILK_BOTTLED
+[EconomyCollector] No market price found for GOATMILK_BOTTLED
+[EconomyCollector] No market price found for BUFFALOMILK_BOTTLED
+[EconomyCollector] Added CREAM to Dairy at $3971.88
+[EconomyCollector] Added BUTTER to Dairy at $1866.68
+[EconomyCollector] Added CHEESE to Dairy at $3000.01
+[EconomyCollector] Added YOGURT to Dairy at $966.67
+[EconomyCollector] Added KEFIR to Dairy at $966.67
+[EconomyCollector] Force-added Dairy with 8 products
+[EconomyCollector] Adding logical products to specific station types...
+[EconomyCollector] Added BOARDS to Alma Logistics at $2086.78
+[EconomyCollector] Added PLANKS to Alma Logistics at $3214.30
+[EconomyCollector] Added FABRIC to Alma Logistics at $5103.83
+[EconomyCollector] Added CEMENT to Alma Logistics at $1738.80
+[EconomyCollector] Added STONE to Alma Logistics at $82.80
+[EconomyCollector] Added WOOD to Sawmill (Wood-Mizer LT15) at $1584.00
+[EconomyCollector] Added TREE to Sawmill (Wood-Mizer LT15) at $158.40
+[EconomyCollector] Added POPLAR to Sawmill (Wood-Mizer LT15) at $63.36
+[EconomyCollector] Added WHEAT to Grain Mill at $523.77
+[EconomyCollector] Added BARLEY to Grain Mill at $486.47
+[EconomyCollector] Added OAT to Grain Mill at $826.84
+[EconomyCollector] Added CORN_DRY to Grain Mill at $552.39
+[EconomyCollector] Added MAIZE to Grain Mill at $420.66
+[EconomyCollector] Added RICE to Grain Mill at $1790.91
+[EconomyCollector] Added CANOLA to Grain Mill at $1021.30
+[EconomyCollector] Added WHEAT to Grain West Silo at $511.73
+[EconomyCollector] Added BARLEY to Grain West Silo at $475.28
+[EconomyCollector] Added OAT to Grain West Silo at $807.83
+[EconomyCollector] Added CORN_DRY to Grain West Silo at $539.69
+[EconomyCollector] Added MAIZE to Grain West Silo at $410.99
+[EconomyCollector] Added RICE to Grain West Silo at $1749.74
+[EconomyCollector] Added CANOLA to Grain West Silo at $997.83
+[EconomyCollector] Added SORGHUM to Grain West Silo at $765.00
+[EconomyCollector] Added COTTON to Grain West Silo at $1956.95
+[EconomyCollector] Added WHEAT to Grain Silo at $511.73
+[EconomyCollector] Added BARLEY to Grain Silo at $475.28
+[EconomyCollector] Added OAT to Grain Silo at $807.83
+[EconomyCollector] Added CORN_DRY to Grain Silo at $539.69
+[EconomyCollector] Added MAIZE to Grain Silo at $410.99
+[EconomyCollector] Added RICE to Grain Silo at $1749.74
+[EconomyCollector] Added CANOLA to Grain Silo at $997.83
+[EconomyCollector] Added SORGHUM to Grain Silo at $765.00
+[EconomyCollector] Added COTTON to Grain Silo at $1956.95
+[EconomyCollector] Added WHEAT to Farm Silo at $511.73
+[EconomyCollector] Added BARLEY to Farm Silo at $475.28
+[EconomyCollector] Added OAT to Farm Silo at $807.83
+[EconomyCollector] Added CORN_DRY to Farm Silo at $539.69
+[EconomyCollector] Added MAIZE to Farm Silo at $410.99
+[EconomyCollector] Added RICE to Farm Silo at $1749.74
+[EconomyCollector] Added CANOLA to Farm Silo at $997.83
+[EconomyCollector] Added SORGHUM to Farm Silo at $765.00
+[EconomyCollector] Added COTTON to Farm Silo at $1956.95
+[EconomyCollector] Added CHAFF to Biogas Plant at $64.21
+[EconomyCollector] Added SILAGE to Biogas Plant at $174.24
+[EconomyCollector] Added MANURE to Biogas Plant at $46.63
+[EconomyCollector] Added SLURRY to Biogas Plant at $40.00
+[EconomyCollector] Added CORN_DRY to Biogas Plant at $507.95
+[EconomyCollector] Added MAIZE to Biogas Plant at $386.81
+[EconomyCollector] Added MILK to Dairy at $1166.67
+[EconomyCollector] Added CREAM to Dairy at $3971.88
+[EconomyCollector] Added BUTTER to Dairy at $1866.68
+[EconomyCollector] Added CHEESE to Dairy at $3000.01
+[EconomyCollector] Added YOGURT to Dairy at $966.67
+[EconomyCollector] Added KEFIR to Dairy at $966.67
+[EconomyCollector] Added CORN_DRY to Corn Dryer at $526.99
+[EconomyCollector] Added MAIZE to Corn Dryer at $401.32
+[EconomyCollector] Added MILK to Bakery at $1098.04
+[EconomyCollector] Added FLOUR to Bakery at $986.11
+[EconomyCollector] Added SUGAR to Bakery at $748.55
+[EconomyCollector] Added EGG to Bakery at $1667.02
+[EconomyCollector] Added BUTTER to Bakery at $1756.87
+[EconomyCollector] Added HONEY to Bakery at $1354.57
+[EconomyCollector] Added BREAD to Bakery at $2358.10
+[EconomyCollector] Added CAKE to Bakery at $5176.49
+[EconomyCollector] Added CORN_DRY to Popcorn Production at $526.99
+[EconomyCollector] Added MAIZE to Popcorn Production at $401.32
+[EconomyCollector] Added BUTTER to Popcorn Production at $1822.75
+[EconomyCollector] Added FLOUR to Pizzeria at $1023.09
+[EconomyCollector] Added CHEESE to Pizzeria at $2929.43
+[EconomyCollector] Added TOMATO to Pizzeria at $672.85
+[EconomyCollector] Added MILK to Pizzeria at $1139.22
+[EconomyCollector] Added EGG to Pizzeria at $1729.53
+[EconomyCollector] Added OLIVE_OIL to Pizzeria at $3163.78
+[EconomyCollector] Added FABRIC to Tailor Shop at $4604.54
+[EconomyCollector] Added WOOL to Tailor Shop at $1082.07
+[EconomyCollector] Added COTTON to Tailor Shop at $1910.91
+[EconomyCollector] Added TOMATO to Ketchup Production at $672.85
+[EconomyCollector] Added SUGAR to Ketchup Production at $776.62

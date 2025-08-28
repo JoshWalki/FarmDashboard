@@ -1,0 +1,25 @@
+<modDesc descVersion="99">
+    <author>FarmDashboard</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>Farm Dashboard</en>
+    </title>
+    <description>
+        <en>
+    <![CDATA[Exports real-time farm data to the Farm Dashboard web application.
+    ]]>
+        </en>
+    </description>
+    <multiplayer supported="true"/>
+    <extraSourceFiles>
+        <sourceFile filename="src/FarmDashboard.lua"/>
+        <sourceFile filename="src/FarmDashboardDataCollector.lua"/>
+        <sourceFile filename="src/collectors/AnimalDataCollector.lua"/>
+        <sourceFile filename="src/collectors/EconomyDataCollector.lua"/>
+        <sourceFile filename="src/collectors/FieldDataCollector.lua"/>
+        <sourceFile filename="src/collectors/FinanceDataCollector.lua"/>
+        <sourceFile filename="src/collectors/ProductionDataCollector.lua"/>
+        <sourceFile filename="src/collectors/VehicleDataCollector.lua"/>
+        <sourceFile filename="src/collectors/WeatherDataCollector.lua"/>
+    </extraSourceFiles>
+</modDesc>
