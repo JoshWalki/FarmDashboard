@@ -1,6 +1,6 @@
-# 🐄 Farming Simulator 25 Dashboard
+![alt text](https://github.com/JoshWalki/FarmDashboard/blob/main/assests/img/logo.png "Logo")
 
-### <code> Repository currently contains local XML save file loading. First release will contain API mod.</code>
+### <code>API release late August.</code>
 
 ## 📦 Features (next release)
 
@@ -59,12 +59,13 @@ The mod runs in the background and collects data from various game systems:
 ## 📌 Important Notices
 
 - This is untested in multiplayer
-- I suggest not opening the dashboard to the public (eg. port forwarding)
+- I suggest not opening the dashboard to the public
 - This can be used across all devices on your local network (mobile, laptop, etc)
 - RealisticLivestock is highly recommended for better data
 
 ---
 
+**JoshWalki**
 Built with ❤️ for FS25 players.
 
 ## Credits
