@@ -2,7 +2,7 @@
 
 ### <code>[API release out now](https://github.com/JoshWalki/FarmDashboard/releases/tag/v2.14.3)</code>
 
-## 📦 Features (next release)
+## 📦 Features
 
 - 📁 **Realtime Data streaming**: Loaded directly from your game, using our API.
 - 🐄 **Farm Overview**:
