@@ -1,4 +1,4 @@
-![alt text](https://github.com/JoshWalki/FarmDashboard/blob/main/assests/img/logo.png "Logo")
+![alt text](https://github.com/JoshWalki/FarmDashboard/blob/main/web/assests/img/logo.png "Logo")
 
 ### <code>API release late August.</code>
 
@@ -58,7 +58,7 @@ The mod runs in the background and collects data from various game systems:
 
 ## 📌 Important Notices
 
-- This is untested in multiplayer
+- This mod can not be ran when zipped, therefore will not work in multiplayer
 - I suggest not opening the dashboard to the public
 - This can be used across all devices on your local network (mobile, laptop, etc)
 - RealisticLivestock is highly recommended for better data
