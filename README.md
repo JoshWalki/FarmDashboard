@@ -1,6 +1,6 @@
 ![alt text](https://github.com/JoshWalki/FarmDashboard/blob/main/web/assests/img/logo.png "Logo")
 
-### <code>API release late August.</code>
+### <code>[API release out now](https://github.com/JoshWalki/FarmDashboard/releases/tag/v2.14.3)</code>
 
 ## 📦 Features (next release)
 
