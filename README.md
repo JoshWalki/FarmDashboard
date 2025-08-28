@@ -36,7 +36,7 @@
 
 2. Run setup.bat. Ensure there are no errors.
 
-3. Run start-dashboard.bat.
+3. Run start-dashboard.bat (run this to start the web-server in the future)
 
    - Dashboard runs at http://localhost:8766/
 
@@ -66,6 +66,7 @@ The mod runs in the background and collects data from various game systems:
 ---
 
 **JoshWalki**
+
 Built with ❤️ for FS25 players.
 
 ## Credits
