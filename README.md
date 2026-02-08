@@ -2,10 +2,10 @@
 
 ### <code>[API release out now](https://github.com/JoshWalki/FarmDashboard/releases/tag/v2.14.3)</code>
 
-## 📦 Features
+## Features
 
-- 📁 **Realtime Data streaming**: Loaded directly from your game, using our API.
-- 🐄 **Farm Overview**:
+- **Realtime Data streaming**: Loaded directly from your game, using our API.
+- **Farm Overview**:
 
   - Detailed stats for each animal (health, age, reproduction, genetics, etc.)
   - Pastures and notices related to those pastures (low food, water, reproduction information, storage estimates)
@@ -13,14 +13,14 @@
   - View vehicles purchased with their information
   - Notification history with important information
 
-- 📊 **Statistics & Health Tracking**:
+- **Statistics & Health Tracking**:
 
   - Summary cards for herd insights (pregnant, lactating, average health).
   - Health bar visualizations and genetic data (if available).
 
-- 🔜 **Much, much more to come**
+- **Much, much more to come**
 
-## 🐮 Installation
+## Installation
 
 #### Prerequisites
 
@@ -42,7 +42,7 @@
 
 4. Start your game, load your save with the mod enabled.
 
-## 💡 How It Works
+## How It Works
 
 The mod runs in the background and collects data from various game systems:
 
@@ -56,7 +56,7 @@ The mod runs in the background and collects data from various game systems:
 - All data exports to: `[FS25 directory]\modSettings\FS25_FarmDashboard\data.json`
 - Can be loaded when offline though changes are not live.
 
-## 📌 Important Notices
+## Important Notices
 
 - This mod can not be ran when zipped, therefore will not work in multiplayer
 - I suggest not opening the dashboard to the public
