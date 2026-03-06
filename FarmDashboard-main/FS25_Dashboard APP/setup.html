@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup - FS25 Farm Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e2e;
+            color: #cdd6f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow-y: auto;
+        }
+        .container {
+            background-color: #313244;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            width: 400px;
+            margin: 20px 0;
+        }
+        h2 {
+            margin-top: 0;
+            text-align: center;
+            color: #89b4fa;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        input[type="text"], input[type="password"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #45475a;
+            border-radius: 6px;
+            background-color: #1e1e2e;
+            color: #cdd6f4;
+            box-sizing: border-box;
+        }
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #45475a;
+        }
+        .radio-group label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #a6e3a1;
+            color: #11111b;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #94e289;
+        }
+        /* Hide FTP settings by default */
+        #ftp-settings {
+            display: none;
+        }
+        .hint {
+            font-size: 12px;
+            color: #a6adc8;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Connection Setup</h2>
+
+    <div class="radio-group">
+        <label>
+            <input type="radio" name="mode" value="local" checked onchange="toggleMode()"> Local PC
+        </label>
+        <label>
+            <input type="radio" name="mode" value="ftp" onchange="toggleMode()"> Dedicated Server (FTP)
+        </label>
+    </div>
+
+    <div id="local-settings">
+        <div class="form-group">
+            <label for="localPath">Path to data.json folder</label>
+            <input type="text" id="localPath" placeholder="C:\Users\...\modSettings\FS25_FarmDashboard">
+            <div class="hint">Leave blank to auto-detect standard single-player installations.</div>
+        </div>
+    </div>
+
+    <div id="ftp-settings">
+        <div class="form-group">
+            <label for="ftpHost">FTP IP / Host</label>
+            <input type="text" id="ftpHost" placeholder="e.g., 192.168.1.50 or ftp.gportal.com">
+        </div>
+        <div class="form-group">
+            <label for="ftpPort">FTP Port</label>
+            <input type="number" id="ftpPort" value="21">
+        </div>
+        <div class="form-group">
+            <label for="ftpUser">Username</label>
+            <input type="text" id="ftpUser" placeholder="FTP Username">
+        </div>
+        <div class="form-group">
+            <label for="ftpPass">Password</label>
+            <input type="password" id="ftpPass" placeholder="FTP Password">
+        </div>
+        
+        <div class="form-group">
+            <label for="ftpBasePath">Base Profile Path</label>
+            <input type="text" id="ftpBasePath" value="profile">
+            <div class="hint">The root folder for your server saves (usually 'profile' on GPortal).</div>
+        </div>
+        <div class="form-group">
+            <label for="ftpSavegame">Savegame Slot</label>
+            <input type="text" id="ftpSavegame" value="savegame1">
+            <div class="hint">The folder where your current XML save files live (e.g., savegame1).</div>
+        </div>
+    </div>
+
+    <button onclick="saveSettings()">Save & Connect</button>
+</div>
+
+<script>
+    const { ipcRenderer } = require('electron');
+
+    function toggleMode() {
+        const mode = document.querySelector('input[name="mode"]:checked').value;
+        if (mode === 'local') {
+            document.getElementById('local-settings').style.display = 'block';
+            document.getElementById('ftp-settings').style.display = 'none';
+        } else {
+            document.getElementById('local-settings').style.display = 'none';
+            document.getElementById('ftp-settings').style.display = 'block';
+        }
+    }
+
+    function saveSettings() {
+        const mode = document.querySelector('input[name="mode"]:checked').value;
+        const config = { mode: mode };
+
+        if (mode === 'local') {
+            config.localPath = document.getElementById('localPath').value;
+        } else {
+            config.ftpHost = document.getElementById('ftpHost').value;
+            config.ftpPort = document.getElementById('ftpPort').value;
+            config.ftpUser = document.getElementById('ftpUser').value;
+            config.ftpPass = document.getElementById('ftpPass').value;
+            
+            // Capture the new path variables
+            config.ftpBasePath = document.getElementById('ftpBasePath').value || 'profile';
+            config.ftpSavegame = document.getElementById('ftpSavegame').value || 'savegame1';
+            
+            // Basic validation
+            if (!config.ftpHost || !config.ftpUser || !config.ftpPass) {
+                alert("Please fill in all FTP details.");
+                return;
+            }
+        }
+
+        // Send the settings back to our main.js file
+        ipcRenderer.send('save-settings', config);
+    }
+</script>
+
+</body>
+</html>
