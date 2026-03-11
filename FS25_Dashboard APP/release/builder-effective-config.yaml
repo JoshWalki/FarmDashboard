@@ -1,0 +1,16 @@
+directories:
+  output: release/
+  buildResources: build
+appId: com.farmdashboard.app
+productName: FS25 Farm Dashboard
+win:
+  target: nsis
+  icon: icon.ico
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Farm Dashboard
+files: []
+electronVersion: 29.4.6
