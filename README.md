@@ -126,7 +126,7 @@ The project has just successfully moved through Stage 1 of Development, focusing
 * Multi-server tab system.
 * Multi-farm dropdown support.
 * Auto-detection of local saves.
-* Real-time data synchronization.
+* Real-time data synchronization with Precision Farming 3.0.
 
 ### 🚧 Stage 2: Advanced Filtering
 * Linking Farm ID to the Fields tab to show only owned land.
